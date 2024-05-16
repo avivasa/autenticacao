@@ -125,3 +125,16 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = 'usuarios.CustomUser'
+
+# settings.py
+
+
+
+# Configuração para enviar e-mails usando SMTP (Gmail como exemplo)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Host SMTP do Gmail
+EMAIL_PORT = 587  # Porta SMTP do Gmail
+EMAIL_USE_TLS = True  # Use TLS (Transport Layer Security) para criptografar a conexão
+EMAIL_HOST_USER = 'email@gmail.com'  # Seu endereço de e-mail do Gmail
+EMAIL_HOST_PASSWORD = ''  # Sua senha do Gmail ou token de aplicativo, se a autenticação em duas etapas estiver ativada
+DEFAULT_FROM_EMAIL = 'email@gmail.com'  # Endereço de e-mail padrão usado como o remetente
